@@ -6,6 +6,14 @@ NFCoreDataExtensions contains a number of helpful categories on Core Data classe
 This was partly inspired by Matt Gallagher's [Core Data: one line fetch](http://cocoawithlove.com/2008/03/core-data-one-line-fetch.html) blog post, and by Austin Ziegler's [coredata-easyfetch](https://github.com/halostatue/coredata-easyfetch) library.
 
 
+Usage
+-------
+
+To use NFCoreDataExtensions, simply add `NFCoreDataExtensions.h` and `NFCoreDataExtensions.m` to your Xcode project, then add the following line to your Prefix.pch:
+
+	#import "NFCoreDataExtensions.h"
+	
+	
 Examples
 --------
 
