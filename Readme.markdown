@@ -46,13 +46,13 @@ Some other examples:
 
 	NSArray *allButtons = [context fetchObjectsForEntityName:@"Button"];
 	NSArray *allButtonsSortedBySize = [context fetchObjectsForEntityName:@"Button" sortByKey:@"size" ascending:YES];
-	NSArray *blueButtons = [context fetchObjectsForEntityName:@"Button" predicateFormat:@"color == %@", color];
+	NSArray *blueButtons = [context fetchObjectsForEntityName:@"Button" withPredicateFormat:@"color == %@", color];
 	NSArray *blueButtonsSortedBySize = [context fetchObjectsForEntityName:@"Button" sortByKey:@"size" ascending:YES withPredicateFormat:@"color == %@", color];
 
 You can also request single objects (these methods actually tell Core Data to only fetch one object, so they should be faster than selecting the first object after performing a request for multiple objects):
 
 	Button *anyButton = [context fetchFirstObjectForEntityName:@"Button"];
-	Button *anyBlueButton = [context fetchFirstObjectForEntityName:@"Button"];
+	Button *anyBlueButton = [context fetchFirstObjectForEntityName:@"Button" withPredicateFormat:@"color == %@", color];
 	Button *largestButton = [context fetchFirstObjectForEntityName:@"Button" sortByKey:@"size" ascending:NO];
 	Button *largestBlueButton = [context fetchFirstObjectForEntityName:@"Button" sortByKey:@"size" ascending:NO withPredicateFormat:@"color == %@", color];
 	
